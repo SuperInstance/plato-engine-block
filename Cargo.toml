@@ -1,0 +1,16 @@
+[package]
+name = "plato-engine-block"
+version = "0.1.0"
+edition = "2021"
+description = "Atomic room runtime for the Plato Matrix — universal agent-space interface"
+license = "MIT"
+repository = "https://github.com/SuperInstance/plato-engine-block"
+
+[features]
+default = ["std"]
+std = []
+server = ["std", "dep:tokio", "dep:tokio-util"]
+
+[dependencies]
+tokio = { version = "1", features = ["net", "io-util", "rt-multi-thread", "macros", "sync"], optional = true }
+tokio-util = { version = "0.7", features = ["codec"], optional = true }
