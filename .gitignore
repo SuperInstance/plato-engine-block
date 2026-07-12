@@ -1,1 +1,28 @@
+# Rust
 /target
+target/
+**/target/
+Cargo.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.pytest_cache/
+
+# Zig
+.zig-cache/
+zig-out/
+*.o
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Misc
+*.log
+.env
