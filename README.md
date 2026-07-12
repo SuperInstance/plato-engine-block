@@ -1,5 +1,6 @@
 # Plato Engine Block
 
+> **Plato Engine Block — a sub-400-line room runtime for agent-space interaction.**  
 > *The atomic room runtime for the Plato Matrix — a universal agent-space interface.*
 
 ## What Is This?
@@ -233,6 +234,27 @@ src/
 ├── protocol.rs   — Text command parser, response formatter
 └── server.rs     — Tokio TCP server (behind "server" feature)
 ```
+
+## PLATO Engine Block Family
+
+This is the original Rust implementation of the Plato Engine Block. The complete family:
+
+| Implementation | Language | Repo | Focus |
+|---|---|---|---|
+| **Rust (Original)** ← you are here | Rust | [plato-engine-block](https://github.com/SuperInstance/plato-engine-block) | `no_std` + alloc, builder pattern, tokio server |
+| **C Reference** | C99 | [plato-engine-block-c](https://github.com/SuperInstance/plato-engine-block-c) | Embedded, bare-metal, zero heap alloc |
+| **Elixir/OTP** | Elixir | [plato-engine-block-elixir](https://github.com/SuperInstance/plato-engine-block-elixir) | BEAM supervision trees, fault tolerance, hot reload |
+| **Zig** | Zig | [plato-engine-block-zig](https://github.com/SuperInstance/plato-engine-block-zig) | Comptime ternary packing, cross-compile, zero hidden control flow |
+| **Python Core** | Python | [plato-core](https://github.com/SuperInstance/plato-core) | Foundation types, mesh registry, training tiles |
+| **Runtime Kernel** | Rust | [plato-runtime-kernel](https://github.com/SuperInstance/plato-runtime-kernel) | Spatial model: tensor grid, batons, assertion traps |
+| **Server** | Python | [plato-server](https://github.com/SuperInstance/plato-server) | Knowledge tiles, fleet sync via Matrix, HTTP API |
+
+**Specs & Guides:**
+- 📜 [PLATO Wire Protocol](https://github.com/SuperInstance/AI-Writings/blob/main/PLATO_WIRE_PROTOCOL.md)
+- 📖 [PLATO Master Guide](https://github.com/SuperInstance/AI-Writings/blob/main/PLATO_MASTER_GUIDE.md)
+- 🗺️ [PLATO Ecosystem Map](https://github.com/SuperInstance/AI-Writings/blob/main/PLATO_ECOSYSTEM_MAP.md)
+- 🏗️ [PLATO Rust Architecture](https://github.com/SuperInstance/AI-Writings/blob/main/PLATO_RUST_ARCHITECTURE.md)
+
 
 ## License
 
