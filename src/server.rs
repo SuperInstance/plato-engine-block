@@ -53,7 +53,7 @@ pub async fn run_server(
 
                 // Send welcome
                 let _ = writer
-                    .write_all(b"Plato Engine Block v0.1.0\nType 'help' for commands.\n")
+                    .write_all(b"{\"type\":\"welcome\",\"room_id\":\"engine_room\",\"tick_hz\":0.2,\"sensors\":[]}\n")
                     .await;
                 let _ = writer.flush().await;
 
